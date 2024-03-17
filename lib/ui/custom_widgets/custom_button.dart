@@ -17,7 +17,7 @@ class CustomButton extends StatelessWidget {
         child: Text(
           "$text",
           style: TextStyle(
-              fontFamily: hamon_bold, color: Colors.white, fontSize: 16),
+              fontFamily: hamon_bold, color: Colors.white, fontSize: 18),
         ),
       ),
     );

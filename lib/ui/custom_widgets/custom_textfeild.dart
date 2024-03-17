@@ -6,10 +6,12 @@ class CustomTextFeild extends StatelessWidget {
   String hintText;
   bool? obsecure;
   Widget? suffex;
-  Widget? countrycode;
 
-  CustomTextFeild(
-      {required this.hintText, this.obsecure, this.suffex, this.countrycode});
+  CustomTextFeild({
+    required this.hintText,
+    this.obsecure,
+    this.suffex,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -24,9 +26,9 @@ class CustomTextFeild extends StatelessWidget {
           suffixIcon: suffex,
           focusedBorder: OutlineInputBorder(
               borderSide: BorderSide(color: textfeild_color, width: 1),
-              borderRadius: BorderRadius.circular(20)),
+              borderRadius: BorderRadius.circular(16)),
           enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(16),
               borderSide: BorderSide(color: textfeild_color, width: 1)),
         ),
       ),
