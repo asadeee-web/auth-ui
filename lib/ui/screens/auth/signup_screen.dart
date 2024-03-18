@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login_page_ui/core/constants/colors.dart';
-import 'package:login_page_ui/core/constants/strings.dart';
+//import 'package:login_page_ui/core/constants/strings.dart';
 import 'package:login_page_ui/core/constants/styles.dart';
 import 'package:login_page_ui/ui/custom_widgets/custom_account_container.dart';
 import 'package:login_page_ui/ui/custom_widgets/custom_button.dart';
@@ -20,7 +20,8 @@ class SignUpScreen extends StatelessWidget {
           style: headingtext.copyWith(fontSize: 30),
         ),
         centerTitle: true,
-        leading: Icon(Icons.arrow_back_ios),
+        automaticallyImplyLeading: false,
+        //leading: Icon(Icons.arrow_back_ios),
       ),
       body: SingleChildScrollView(
         child: Padding(

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+//import 'package:get/get.dart';
 import 'package:login_page_ui/core/constants/colors.dart';
 
 import 'package:login_page_ui/core/constants/styles.dart';
 import 'package:login_page_ui/ui/custom_widgets/custom_account_container.dart';
 import 'package:login_page_ui/ui/custom_widgets/custom_button.dart';
 import 'package:login_page_ui/ui/custom_widgets/custom_textfeild.dart';
+import 'package:login_page_ui/ui/screens/auth/forgot_screen.dart';
 import 'package:login_page_ui/ui/screens/auth/signup_screen.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -15,8 +16,10 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: backround_color,
-      appBar:
-          AppBar(centerTitle: true, title: Text("Login", style: headingtext)),
+      appBar: AppBar(
+          automaticallyImplyLeading: false,
+          centerTitle: true,
+          title: Text("Login", style: headingtext)),
       body: Padding(
         padding: const EdgeInsets.symmetric(
           horizontal: 30,
@@ -51,11 +54,17 @@ class LoginScreen extends StatelessWidget {
                 hintText: "Password",
                 suffex: Icon(Icons.remove_red_eye),
               ),
-              Align(
-                alignment: Alignment.bottomRight,
-                child: Text(
-                  "forgot password?",
-                  style: subtext,
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => ForgotScreen()));
+                },
+                child: Align(
+                  alignment: Alignment.bottomRight,
+                  child: Text(
+                    "forgot password?",
+                    style: subtext,
+                  ),
                 ),
               ),
               SizedBox(
