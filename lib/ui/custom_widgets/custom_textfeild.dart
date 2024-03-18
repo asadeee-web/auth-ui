@@ -18,6 +18,8 @@ class CustomTextFeild extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 10),
       child: TextFormField(
+        obscureText: obsecure ?? false,
+        obscuringCharacter: "*",
         decoration: InputDecoration(
           fillColor: Color(0xffFDFDFD),
           filled: true,

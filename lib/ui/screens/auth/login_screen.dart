@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:intl_phone_field/intl_phone_field.dart';
+import 'package:get/get.dart';
 import 'package:login_page_ui/core/constants/colors.dart';
-import 'package:login_page_ui/core/constants/strings.dart';
+
 import 'package:login_page_ui/core/constants/styles.dart';
 import 'package:login_page_ui/ui/custom_widgets/custom_account_container.dart';
 import 'package:login_page_ui/ui/custom_widgets/custom_button.dart';
 import 'package:login_page_ui/ui/custom_widgets/custom_textfeild.dart';
+import 'package:login_page_ui/ui/screens/auth/signup_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -46,6 +47,7 @@ class LoginScreen extends StatelessWidget {
                 style: subtext,
               ),
               CustomTextFeild(
+                obsecure: true,
                 hintText: "Password",
                 suffex: Icon(Icons.remove_red_eye),
               ),
@@ -71,7 +73,10 @@ class LoginScreen extends StatelessWidget {
                     style: subtext.copyWith(color: Colors.black54),
                   ),
                   TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => SignUpScreen()));
+                      },
                       child: Text(
                         "Sign Up",
                         style: subtext.copyWith(
