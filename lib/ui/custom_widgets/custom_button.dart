@@ -4,7 +4,11 @@ import 'package:login_page_ui/core/constants/styles.dart';
 
 class CustomButton extends StatelessWidget {
   String text;
-  CustomButton({super.key, required this.text});
+  //final onpressed;
+  CustomButton({
+    super.key,
+    required this.text,
+  });
 
   @override
   Widget build(BuildContext context) {

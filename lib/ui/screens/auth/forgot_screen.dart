@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'package:login_page_ui/core/constants/colors.dart';
 import 'package:login_page_ui/core/constants/strings.dart';
 import 'package:login_page_ui/core/constants/styles.dart';
 import 'package:login_page_ui/ui/custom_widgets/custom_button.dart';
 import 'package:login_page_ui/ui/custom_widgets/custom_textfeild.dart';
 import 'package:login_page_ui/ui/screens/auth/login_screen.dart';
+import 'package:login_page_ui/ui/screens/auth/verify_screen.dart';
 
 class ForgotScreen extends StatelessWidget {
   const ForgotScreen({super.key});
@@ -73,7 +74,15 @@ class ForgotScreen extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              CustomButton(text: "Get OTP")
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => OtpScreen()));
+                },
+                child: CustomButton(
+                  text: "Get OTP",
+                ),
+              )
             ],
           ),
         ),

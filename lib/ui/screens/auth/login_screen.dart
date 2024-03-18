@@ -55,18 +55,17 @@ class LoginScreen extends StatelessWidget {
                 suffex: Icon(Icons.remove_red_eye),
               ),
               GestureDetector(
-                onTap: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => ForgotScreen()));
-                },
-                child: Align(
-                  alignment: Alignment.bottomRight,
-                  child: Text(
-                    "forgot password?",
-                    style: subtext,
-                  ),
-                ),
-              ),
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => ForgotScreen()));
+                  },
+                  child: Align(
+                    alignment: Alignment.bottomRight,
+                    child: Text(
+                      "forgot password?",
+                      style: subtext,
+                    ),
+                  )),
               SizedBox(
                 height: 15,
               ),
