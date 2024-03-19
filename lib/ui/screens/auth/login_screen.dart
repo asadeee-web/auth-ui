@@ -52,7 +52,7 @@ class LoginScreen extends StatelessWidget {
               CustomTextFeild(
                 obsecure: true,
                 hintText: "Password",
-                suffex: Icon(Icons.remove_red_eye),
+                suffex: Icon(Icons.visibility_off),
               ),
               GestureDetector(
                   onTap: () {

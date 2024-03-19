@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:login_page_ui/core/constants/colors.dart';
 import 'package:login_page_ui/core/constants/styles.dart';
 
+// ignore: must_be_immutable
 class CustomContainer extends StatelessWidget {
   String text;
   String icon;

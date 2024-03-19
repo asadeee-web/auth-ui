@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:login_page_ui/core/constants/strings.dart';
 import 'package:login_page_ui/core/constants/styles.dart';
