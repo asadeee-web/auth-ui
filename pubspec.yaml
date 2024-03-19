@@ -38,6 +38,7 @@ dependencies:
   intl_phone_field: ^3.2.0
   get: ^4.6.6
   flutter_screenutil: ^5.9.0
+  pinput: ^3.0.1
 
 
 dev_dependencies:
